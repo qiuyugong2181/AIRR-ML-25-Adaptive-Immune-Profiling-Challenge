@@ -19,7 +19,7 @@ The notebooks were used as follows:
 - Notebook 3 for Dataset 7  
 - Notebook 4 for Dataset 8  
 
-**scripts**  
+**Scripts**  
 Cleaned and reusable Python modules for feature encoding and model training.
 
 ---
