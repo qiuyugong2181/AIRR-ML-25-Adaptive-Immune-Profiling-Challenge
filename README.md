@@ -1,3 +1,4 @@
+
 # AIRR ML 25 Adaptive Immune Profiling Challenge
 
 This repository contains the code for our **6th place** solution to the Kaggle  
@@ -10,12 +11,20 @@ https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025/ove
 
 **01–04_notebooks**  
 Main training and submission notebooks used for the final Kaggle results.  
-These reflect the real development workflow and may contain duplicated or unused code, but they are the exact versions used.
+These reflect the real development workflow and may contain duplicated or unused code, but they are the exact versions used to produce the final submissions.
+
+The notebooks were used as follows:  
+- Notebook 1 for Datasets 1, 3, and 6  
+- Notebook 2 for Datasets 2, 4, and 5  
+- Notebook 3 for Dataset 7  
+- Notebook 4 for Dataset 8  
 
 **scripts**  
 Cleaned and reusable Python modules for feature encoding and model training.
 
 ---
+
+## Environment
 
 ## Environment
 conda create -n airr-ml -c conda-forge  python=3.11 numpy pandas tqdm scikit-learn xgboost optuna
@@ -24,7 +33,7 @@ conda create -n airr-ml -c conda-forge  python=3.11 numpy pandas tqdm scikit-lea
 
 ## Methods
 
-### 1. Public Clone Logistic Regression
+### 1. Public Clone Logistic Regression. 
 Shared CDR3 clones enriched in positive samples are selected using log odds. Each repertoire is encoded as a presence matrix of these clones, and a regularized logistic regression model is trained. Feature selection is done inside each cross validation fold to prevent leakage.
 
 ### 2. K mer and V J XGBoost
