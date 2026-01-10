@@ -25,9 +25,12 @@ Cleaned and reusable Python modules for feature encoding and model training.
 ---
 
 ## Environment
-
-## Environment
+### Conda
+I was using conda env under standard ubuntu:22.04. You can install all required packages by using this codes:
 conda create -n airr-ml -c conda-forge  python=3.11 numpy pandas tqdm scikit-learn xgboost optuna
+
+## Docker
+docker file is also available 
 
 ---
 
