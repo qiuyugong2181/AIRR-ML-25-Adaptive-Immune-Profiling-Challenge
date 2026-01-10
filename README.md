@@ -24,8 +24,10 @@ Cleaned and reusable Python modules for feature encoding and model training.
 
 ---
 ## IDE usage
-
 The scripts were ran in the instance with 48 cores and 380GB memory.
+
+## Runtime
+I didn’t track the runtime very carefully, but with 100 iterations (batches) the script should finish in under eight hours for a single dataset. The exact runtime will vary depending on the dataset size.
 
 ## Environment
 
