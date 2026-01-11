@@ -10,8 +10,9 @@ https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025/ove
 ## Repository
 
 **01–04_notebooks**  
+
 Main training and submission notebooks used for the final Kaggle results.  
-These reflect the real development workflow and may contain duplicated or unused code, but they are the exact versions used to produce the final submissions.
+These reflect the real development workflow and may contain duplicated or unused code, but they are the exact versions used to produce the final submissions. The notebook also contain the final param/n_iternation used.
 
 The notebooks were used as follows:  
 - Notebook 1 for Datasets 1, 3, and 6  
@@ -20,7 +21,11 @@ The notebooks were used as follows:
 - Notebook 4 for Dataset 8  
 
 **Scripts**  
-Cleaned and reusable Python modules for feature encoding and model training.
+Cleaned and reusable Python modules for feature encoding and model training. All script can be run in the termial directly. 
+
+Example of running
+
+python *.py --train_dir train_datasets/train_datasets/train_dataset_1/ --test_dir test_datasets/test_datasets/test_dataset_1/ --out_dir submissions/ --n_jobs 30 --n_iter 100
 
 ---
 ## IDE usage
@@ -33,7 +38,8 @@ I didn’t track the runtime very carefully, but with 100 iterations (batches) t
 
 ### Conda
 I was using conda env under standard ubuntu:22.04. You can install all required packages by using this codes:
-conda create -n airr-ml -c conda-forge  python=3.11 numpy pandas tqdm scikit-learn xgboost optuna
+
+##### conda create -n airr-ml -c conda-forge  python=3.11 numpy pandas tqdm scikit-learn xgboost optuna
 
 ## Docker
 docker file is also available 
