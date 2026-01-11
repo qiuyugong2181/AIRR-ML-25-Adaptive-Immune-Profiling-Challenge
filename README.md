@@ -21,7 +21,7 @@ The notebooks were used as follows:
 - Notebook 4 for Dataset 8  
 
 **Scripts**  
-Cleaned and reusable Python modules for feature encoding and model training. All script can be run in the termial directly. 
+Cleaned and reusable Python modules for feature encoding and model training. All script can be run in the termial directly. Most of cleaning work are done by LLM :)
 
 Example of running
 
