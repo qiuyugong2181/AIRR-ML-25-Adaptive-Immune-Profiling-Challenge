@@ -11,7 +11,7 @@ https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025/ove
 
 **01–04_notebooks**  
 
-Main training and submission notebooks used for the final Kaggle results.  
+Main training and submission notebooks used for the final Kaggle results. The notebooks is not cleaned, but should working if you excute codes from begining.
 These reflect the real development workflow and may contain duplicated or unused code, but they are the exact versions used to produce the final submissions. The notebook also contain the final param/n_iternation used.
 
 The notebooks were used as follows:  
