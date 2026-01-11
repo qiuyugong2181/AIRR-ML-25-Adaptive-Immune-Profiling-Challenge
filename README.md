@@ -25,7 +25,7 @@ Cleaned and reusable Python modules for feature encoding and model training. All
 
 Example of running
 
-python *.py --train_dir train_datasets/train_datasets/train_dataset_1/ --test_dir test_datasets/test_datasets/test_dataset_1/ --out_dir submissions/ --n_jobs 30 --n_iter 100
+python *.py --train_dir train_datasets/train_datasets/train_dataset_1/ --test_dir test_datasets/test_datasets/test_dataset_1/ --out_dir submissions/ --n_jobs 30 
 
 ---
 ## IDE usage
