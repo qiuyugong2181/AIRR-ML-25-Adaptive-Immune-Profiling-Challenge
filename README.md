@@ -7,7 +7,7 @@ https://www.kaggle.com/competitions/adaptive-immune-profiling-challenge-2025/ove
 
 ---
 
-## Repository
+## Repository 
 
 **01–04_notebooks**  
 
@@ -20,7 +20,7 @@ The notebooks were used as follows:
 - Notebook 3 for Dataset 7  
 - Notebook 4 for Dataset 8  
 
-**Scripts**  
+**Script**  
 Cleaned and reusable Python modules for feature encoding and model training. All script can be run in the termial directly. Most of cleaning work are done by LLM :)
 
 Example of running
