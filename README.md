@@ -47,7 +47,7 @@ docker file is also available
 
 ---
 
-## Methods
+## Notebook Methods
 
 ### 1. Public Clone Logistic Regression. 
 Shared CDR3 clones that are enriched in positive samples are selected using log-odds. Each repertoire is then encoded as a presence/absence matrix of these clones, and a regularized logistic regression model is trained. Feature selection is performed inside each cross-validation fold to avoid information leakage. Scoring is based on log-odds; this could be improved by using model-derived feature importance, but I did not implement that step.
@@ -56,6 +56,7 @@ Shared CDR3 clones that are enriched in positive samples are selected using log-
 Repertoires are encoded using exact 3-mers, 9 different gapped 3-mers, mismatch-smoothed k-mers, and V and J gene usage. Features are normalized per repertoire and used to train an XGBoost classifier tuned with Optuna. Feature scoring is based directly on XGBoost importance. More robust approaches such as SHAP or permutation importance would be preferable, but they were computationally too expensive for this run.
 
 ### 3 and 4. Feature Split Ensemble for Datasets 7 and 8
+Features used are same with notebook method 2
 For datasets 7 and 8, each feature group is trained as a separate model and combined in a second stage ensemble.  
 Model 3 uses XGBoost for the base models and logistic regression for the ensemble.  
 Model 4 uses logistic regression for the base models and XGBoost for the ensemble.
