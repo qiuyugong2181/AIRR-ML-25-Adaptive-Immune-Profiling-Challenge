@@ -1008,9 +1008,9 @@ def main():
     k = 3
     use_gaps = True
     use_mismatch = True
-    n_jobs = 40
+    n_jobs = 30
     subsample_n = None
-    n_iter = 1
+    n_iter = 100
 
     test_dirs = _split_test_dirs(args.test_dir)
     if isinstance(test_dirs, str):
