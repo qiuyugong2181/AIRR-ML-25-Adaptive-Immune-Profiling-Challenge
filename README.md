@@ -50,10 +50,10 @@ docker file is also available
 ## Methods
 
 ### 1. Public Clone Logistic Regression. 
-Shared CDR3 clones enriched in positive samples are selected using log odds. Each repertoire is encoded as a presence matrix of these clones, and a regularized logistic regression model is trained. Feature selection is done inside each cross validation fold to prevent leakage.
+Shared CDR3 clones that are enriched in positive samples are selected using log-odds. Each repertoire is then encoded as a presence/absence matrix of these clones, and a regularized logistic regression model is trained. Feature selection is performed inside each cross-validation fold to avoid information leakage. Scoring is based on log-odds; this could be improved by using model-derived feature importance, but I did not implement that step.
 
 ### 2. K mer and V J XGBoost
-Repertoires are encoded using exact 3 mers, gapped 3 mers, mismatch smoothed k mers, and V and J gene usage. Features are normalized per repertoire and used to train an XGBoost classifier optimized with Optuna.
+Repertoires are encoded using exact 3-mers, 9 different gapped 3-mers, mismatch-smoothed k-mers, and V and J gene usage. Features are normalized per repertoire and used to train an XGBoost classifier tuned with Optuna. Feature scoring is based directly on XGBoost importance. More robust approaches such as SHAP or permutation importance would be preferable, but they were computationally too expensive for this run.
 
 ### 3 and 4. Feature Split Ensemble for Datasets 7 and 8
 For datasets 7 and 8, each feature group is trained as a separate model and combined in a second stage ensemble.  
@@ -63,5 +63,3 @@ Model 4 uses logistic regression for the base models and XGBoost for the ensembl
 Feature importance is computed by combining weights from the base models and the ensemble, allowing sequence level scoring.
 
 ---
-
-Together, these models capture both public immune signatures and fine scale sequence motifs, producing a strong AIRR classification pipeline.
